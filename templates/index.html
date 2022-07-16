@@ -1,0 +1,34 @@
+{% extends "base.html"%}
+
+{% block title %}
+<title> Light </title>
+{% endblock %}
+
+{%block body%}
+ <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="{{ url_for('static', filename='/image/1.png') }}" />
+            <div class="card-body">
+              <p  align="center"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn btn-warning">
+                  <button type="button" class="btn btn-warning">On/Off</button>
+
+                </div>
+                <h1 class="text-muted">КУХНЯ</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+{%endblock%}
