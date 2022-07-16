@@ -8,23 +8,32 @@
  <div class="album py-5 bg-light">
     <div class="container">
 
+
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+{% for el in room%}
+
         <div class="col">
           <div class="card shadow-sm">
+             {% if el.lights == 1 %}
            <img src="{{ url_for('static', filename='/image/1.png') }}" />
+                {%endif%}
+                {% if el.lights == 0 %}
+           <img src="{{ url_for('static', filename='/image/0.png') }}" />
+                {%endif%}
             <div class="card-body">
               <p  align="center"></p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn btn-warning">
-                  <button type="button" class="btn btn-warning">On/Off</button>
+                <div class="btn btn-success">
+                   <a href="/{{el.id}}" class = "btn btn-success">On/Off</a>
 
                 </div>
-                <h1 class="text-muted">КУХНЯ</h1>
+                <h1 class="text-muted">{{el.room_name}}</h1>
               </div>
             </div>
           </div>
         </div>
-
+{%endfor%}
         </div>
 
 
