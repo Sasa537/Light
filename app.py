@@ -11,11 +11,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 
-#@app.before_first_request
-#def create_all():
-    #db.create_all()
-
-
 @app.route("/")
 def index():
     room = Room.query.order_by(Room.id.desc()).all()
