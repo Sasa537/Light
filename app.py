@@ -56,4 +56,4 @@ def on_off(id):
     return redirect("/")
 
 
-app.run(host='localhost', port=5000)
+app.run(host='localhost', port=3000)
