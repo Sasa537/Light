@@ -56,7 +56,7 @@ def on_off(id):
         return redirect('/')
 
     except:
-        return "При редактировании статьи произошла ошибка"
+        return "You have some error"
     return redirect("/")
 
 
